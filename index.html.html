@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pide presupuesto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        form {
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        .consent {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: white;
+            border: 1px solid black;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<form action="https://formspree.io/f/movlbedp" method="POST">
+    <h2>Pide presupuesto</h2>
+    <p><small>** señala los campos obligatorios</small></p>
+
+    <label>Nombre*</label>
+    <input type="text" name="nombre" required>
+
+    <label>Correo electrónico*</label>
+    <input type="email" name="correo" required>
+
+    <label>Teléfono</label>
+    <input type="tel" name="telefono">
+
+    <label>Mensaje</label>
+    <textarea name="mensaje"></textarea>
+
+    <div class="consent">
+        <input type="checkbox" required>
+        <label style="margin-left: 5px;">
+            He leído y acepto la <a href="#">política de privacidad</a>
+        </label>
+    </div>
+
+    <button type="submit">ENVIAR →</button>
+</form>
+
+</body>
+</html>
